@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Peralta&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.title {
+  font-size: 1.5rem;
+  padding: 2rem;
+  line-height: 3rem;
+}
+.title h1 {
+  font-family: "Peralta";
+}
+.game-container {
+  padding: 4rem;
+  width: 50rem;
+  max-width: 100%;
+  height: 80vh;
+  position: relative;
+}
+
+.figure-container {
+  stroke: blue;
+  stroke-width: 4px;
+  fill: transparent;
+  stroke-linecap: round;
+}
+
+.figure-part {
+  display: none;
+}
+
+.word {
+  text-align: center;
+  font-size: 4rem;
+  display: flex;
+  position: absolute;
+  bottom: 4rem;
+  left: 60%;
+  transform: translateX(-50%);
+}
+
+.hint-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hint {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+#hint {
+  border: 0;
+  padding: 1.2rem;
+  text-transform: capitalize;
+  background-color: bisque;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+
+#hint:focus {
+  outline: none;
+}
+#hint:hover {
+  transform: scale(1.1);
+}
+#hint:active {
+  transform: translateY(0.5rem);
+}
+
+.letter {
+  margin-right: 1.5rem;
+}
+
+.wrong-letters-container {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.wrong-letters-container p {
+  font-size: 2rem;
+  color: #000;
+  margin: bottom 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.wrong-letters-container span {
+  color: blue;
+  font-size: 2.5rem;
+}
+
+.popup-container {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup {
+  background-color: #fff;
+  width: 30rem;
+  height: 20rem;
+  padding: 4rem;
+  border-radius: 1rem;
+  margin: 0 auto;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.popup h2 {
+  margin-bottom: 1rem;
+}
+.btn {
+  margin-top: 6rem;
+  padding: 1rem;
+  border: 0;
+  font-weight: bold;
+  font-family: "Peralta";
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.6);
+}
+
+.btn:active {
+  transform: translateY(0.5rem);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.notification {
+  font-size: 2rem;
+  font-family: "Peralta";
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  position: absolute;
+  bottom: -80px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.notification p {
+  margin: 0;
+}
+
+.notification.show {
+  transform: translateY(-80px);
+}

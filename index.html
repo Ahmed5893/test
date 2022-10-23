@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Game</title>
+  </head>
+  <body>
+    <div class="title">
+      <h1>Hangman Game</h1>
+      <p>Find the hidden word - Enter a letter</p>
+    </div>
+    <div class="hint-container">
+      <button id="hint">get a hint</button>
+      <div class="hint"></div>
+    </div>
+
+    <div class="game-container">
+      <svg height="300" width="250" class="figure-container">
+        <!-- Rod -->
+        <line x1="10" y1="300" x2="120" y2="300" class="figure-part" />
+        <line x1="60" y1="20" x2="60" y2="300" class="figure-part" />
+        <line x1="60" y1="20" x2="180" y2="20" class="figure-part" />
+        <line x1="180" y1="20" x2="180" y2="60" class="figure-part" />
+        <!-- head -->
+        <circle cx="180" cy="80" r="20" class="figure-part" />
+        <!-- body -->
+        <line x1="180" y1="100" x2="180" y2="200" class="figure-part" />
+        <!-- arms -->
+        <line x1="180" y1="120" x2="140" y2="160" class="figure-part" />
+        <line x1="180" y1="120" x2="220" y2="160" class="figure-part" />
+        <!-- legs -->
+        <line x1="180" y1="200" x2="140" y2="250" class="figure-part" />
+        <line x1="180" y1="200" x2="220" y2="250" class="figure-part" />
+      </svg>
+
+      <div class="wrong-letters-container">
+        <div id="wrong-letters"></div>
+      </div>
+      <div class="word" id="word"></div>
+    </div>
+    <div class="popup-container" id="popup-container">
+      ²
+      <div class="popup">
+        <h2 id="message"></h2>
+        <h3 id="word-reveal"></h3>
+        <button class="btn" id="btn">Play Again</button>
+      </div>
+    </div>
+    <div class="notification" id="notification">
+      <p>You have already entered this letter</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
